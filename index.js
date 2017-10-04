@@ -6,6 +6,16 @@ var server = prerender({
     iterations: process.env.PRERENDER_NUM_ITERATIONS
 });
 
+server.use({
+    beforePhantomRequest: function(req, res, next) {
+        if(!req.url || req.url == '/') {
+            req.prerender.documentHTML = "SERVICE AVAILABLE";
+            return res.send(200);
+        }
+        next();
+    }
+});
+
 server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.basicAuth());
 // server.use(prerender.whitelist());
