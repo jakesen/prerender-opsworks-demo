@@ -1,8 +1,12 @@
 {
   "name": "prerender-opsworks-demo",
   "version": "1.0.0",
-  "description": "Demonstration of setting up Prerender for AWS OpsWorks",
-  "main": "index.js",
+  "description": "A demonstration of setting up Prerender for AWS OpsWorks.",
+  "main": "server.js",
+  "dependencies": {
+    "prerender": "^4.4.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +15,9 @@
     "url": "git+https://github.com/jakesen/prerender-opsworks-demo.git"
   },
   "author": "Jacob Senecal",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/jakesen/prerender-opsworks-demo/issues"
   },
-  "homepage": "https://github.com/jakesen/prerender-opsworks-demo#readme",
-  "dependencies": {
-    "prerender": "^4.4.1"
-  }
+  "homepage": "https://github.com/jakesen/prerender-opsworks-demo#readme"
 }
